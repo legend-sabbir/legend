@@ -1,0 +1,119 @@
+@font-face {
+  src: url(nameg.ttf);
+  font-family: time;
+}
+
+@font-face {
+  src: url(digitalism.ttf);
+  font-family: digital;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  background-image: radial-gradient(circle at center center, rgba(33, 33, 33, 0), rgb(33, 33, 33)), repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(45deg, rgb(56, 56, 56) 0px, rgb(56, 56, 56) 5px, transparent 5px, transparent 6px), linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+}
+
+.button {
+  background-color: darkcyan;
+  border: black solid 1px;
+  padding: 0.7rem 0;
+  width: 5rem;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 0 5px white;
+}
+
+#count {
+  margin: auto;
+  font-size: 6rem;
+  font-family: time;
+  font-weight: 500;
+  filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 1px white);
+}
+
+.digital {
+  font-family: digital !important;
+}
+
+#reset {
+  margin-bottom: 30px;
+}
+
+.toast {
+  position: relative;
+  position: absolute;
+  font-weight: 700;
+  text-align: center;
+  height: 30px;
+  width: 210px;
+  background-color: white;
+  border: gold solid 1px;
+  top: 37%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.toast:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border:gold solid 1px;
+  top: -11.5px;
+  left: 30px;
+  transform: rotate(45deg);
+  background-color: inherit;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+
+}
+
+p{
+  color: black;
+  z-index: 1;
+  text-align:center;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+.show{
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  body {
+    gap: 1.3rem;
+  }
+
+  #reset {
+    margin-bottom: 6rem;
+  }
+
+  .button {
+    border: black solid 1px;
+    padding: 1.5rem 0;
+    width: 15rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  #count {
+    font-size: 15rem;
+  }
+
+}
